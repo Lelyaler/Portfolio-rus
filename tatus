@@ -1,0 +1,48 @@
+[33mcommit 7c0b5b6eb5dc2bbc6b26d6be01221c613761c273[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: 471ad4e f2a057a
+Author: Lelyaler <you@example.com>
+Date:   Tue Apr 23 20:01:17 2024 +0300
+
+    добавление новой работы
+
+[33mcommit 471ad4ea42e72cb4e34f92d52ffc7969d11aaa38[m
+Author: Lelyaler <you@example.com>
+Date:   Tue Apr 23 19:59:59 2024 +0300
+
+    jpg
+
+[33mcommit f2a057ae62291a86bac0582f7b9d3340a830624d[m
+Author: Valeriya Cherniavskaya <cherniavsckaya.lera@yandex.ru>
+Date:   Tue Apr 23 19:33:38 2024 +0300
+
+    Create README.md
+
+[33mcommit 4e580e5adfb7e69aaad91737816f8b9af91aa1a3[m
+Author: Lelyaler <you@example.com>
+Date:   Tue Apr 23 19:32:13 2024 +0300
+
+    картирка jpg
+
+[33mcommit a534dad6c46903975f63d5afc0558b8d7b36a91c[m
+Author: Lelyaler <you@example.com>
+Date:   Tue Apr 23 19:23:09 2024 +0300
+
+    first commit
+
+[33mcommit 14c46b7ac9575de31a6caa2a772554b1e58597c9[m
+Author: Lelyaler <you@example.com>
+Date:   Tue Apr 23 19:10:40 2024 +0300
+
+    first commit
+
+[33mcommit 77c7a1c1da4ea50dfb76e77aae8678b4e2d26b6f[m
+Author: Lelyaler <you@example.com>
+Date:   Tue Apr 23 18:59:57 2024 +0300
+
+    Initial commit
+
+[33mcommit a7d5d237328522275c67201e525a0851b55f9a7d[m
+Author: Lelyaler <you@example.com>
+Date:   Tue Apr 23 18:53:07 2024 +0300
+
+    first commit
