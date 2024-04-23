@@ -1,0 +1,498 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lelyaler Portfolio</title>
+    <script src="/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/splitting%401.0.6/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="/splitting%401.0.6/dist/splitting.css" />
+
+    <link
+      rel="stylesheet"
+      href="../splitting%401.0.6/dist/splitting-cells.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo-block">
+          <span class="header__logo">Lelyaler</span>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#about" class="header__nav-link">Обо мне</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#projects" class="header__nav-link">Проекты</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#skills" class="header__nav-link">Навыки</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#contacts" class="header__nav-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="information">
+          <div class="information__about">
+            <h1 class="information__title">
+              Привет, меня зовут Лера
+              <span class="information__hand">👋</span>
+            </h1>
+            <p class="information__subtitle">
+              I`m
+              <span class="information__subtitle-text"></span
+              ><span class="pipe">|</span>
+            </p>
+            <div class="information__buttons">
+              <a class="button button-yellow link link-btn" href="#projects"
+                >Список работ</a
+              >
+              <a class="link link-btn button" href="#contacts">Контакты</a>
+            </div>
+          </div>
+          <img
+            class="information__image"
+            src="images/wwww.png"
+            alt="main img"
+          />
+        </section>
+        <section id="about" class="about">
+          <div class="about__main">
+            <h2 class="title" data-splitting="chars">Обо мне</h2>
+            <p class="about__description" data-splitting="words">
+              Я занимаюсь созданием сайтов около двух лет. Имею комфортное
+              владение HTML, CSS, JavaScript (jQuery), понимание семантики HTML,
+              методологии БЭМ и стилей CSS. Работаю с CSS Grid и Flexbox. Создаю
+              адаптивные кросс-браузерные веб-страницы. Использую препроцессоры
+              CSS, а также средство сборки Gulp. Есть проекты с использованием
+              CSS-фреймворка Tailwind. Также занимаюсь созданием сайтов "под
+              ключ" (покупка хостинга/домена, установка на движок CMS
+              WordPress), работой с хуками PHP.
+            </p>
+            <p class="about__description" data-splitting="words">
+              Я самостоятельно нашел информацию и закрепил ее на практике без
+              помощи рекламных IT-курсов. У меня есть портфолио с моими
+              работами, а также опыт фриланса в разработке HTML/CSS-страниц для
+              клиентов. Стремлюсь к постоянному профессиональному росту в сфере
+              веб-разработки. Моя цель - активно развиваться в области
+              фронтенд-разработки.
+            </p>
+          </div>
+          <div id="contacts" class="about__contacts">
+            <ul class="about__list">
+              <li class="about__list-item">
+                <div class="about__contacts-img">
+                  <img
+                    src="images/smile.svg"
+                    class="about__contacts-icon"
+                    alt="smile img"
+                  />
+                </div>
+                <div class="about__contacts-info">
+                  <h3 class="about__contacts-title">Имя</h3>
+                  <span class="about__contacts-description"
+                    >Валерия Чернявская</span
+                  >
+                </div>
+              </li>
+              <li class="about__list-item">
+                <div class="about__contacts-img">
+                  <img
+                    src="images/mail.svg"
+                    class="about__contacts-icon"
+                    alt="mail img"
+                  />
+                </div>
+                <div class="about__contacts-info">
+                  <h3 class="about__contacts-title">Почта</h3>
+                  <span class="about__contacts-description"
+                    >cherniavsckaya.lera@yandex.ru</span
+                  >
+                </div>
+              </li>
+              <li class="about__list-item">
+                <div class="about__contacts-img">
+                  <a href="https://www.instagram.com/lelyaler"
+                    ><img
+                      src="images/instagram.svg"
+                      class="about__contacts-icon"
+                      alt="instagram img"
+                  /></a>
+                </div>
+                <div class="about__contacts-info">
+                  <h3 class="about__contacts-title">Instagram</h3>
+                  <span class="about__contacts-description">@lelyaler</span>
+                </div>
+              </li>
+              <li class="about__list-item">
+                <div class="about__contacts-img">
+                  <img
+                    src="images/phone.svg"
+                    class="about__contacts-icon"
+                    alt="phoone img"
+                  />
+                </div>
+                <div class="about__contacts-info">
+                  <h3 class="about__contacts-title">Телефон</h3>
+                  <span class="about__contacts-description"
+                    >+375(29) 220 94 26</span
+                  >
+                </div>
+              </li>
+              <li class="about__list-item">
+                <div class="about__contacts-img">
+                  <a href="https://t.me/lelyaler">
+                    <img
+                      src="images/telegram.svg"
+                      class="about__contacts-icon"
+                      alt="telegram img"
+                  /></a>
+                </div>
+                <div class="about__contacts-info">
+                  <h3 class="about__contacts-title">Телеграм</h3>
+                  <span class="about__contacts-description">@lelyaler</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="skills" class="skills">
+          <div class="skills__inner">
+            <h2 class="title" data-splitting="chars">Навыки</h2>
+            <ul class="skills__list">
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <img
+                    class="skills__item-img"
+                    src="images/html.svg"
+                    alt="html logo"
+                  />
+                  <span class="skills__item-title">HTML5</span>
+                </div>
+              </li>
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <img
+                    class="skills__item-img"
+                    src="images/css.svg"
+                    alt="css logo"
+                  />
+                  <span class="skills__item-title">CSS3</span>
+                </div>
+              </li>
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <img
+                    class="skills__item-img"
+                    src="images/javascript.svg"
+                    alt="javascript logo"
+                  />
+                  <span class="skills__item-title">JS</span>
+                </div>
+              </li>
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <img
+                    class="skills__item-img"
+                    src="images/wordpress.svg"
+                    alt="vuejs logo"
+                  />
+                  <span class="skills__item-title">WordPress</span>
+                </div>
+              </li>
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <img
+                    class="skills__item-img"
+                    src="images/gulp.svg"
+                    alt="gulp logo"
+                  />
+                  <span class="skills__item-title">Gulp</span>
+                </div>
+              </li>
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <img
+                    class="skills__item-img"
+                    src="images/tailwind.svg"
+                    alt="tailwind logo"
+                  />
+                  <span class="skills__item-title">Tailwind</span>
+                </div>
+              </li>
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <img
+                    class="skills__item-img"
+                    src="images/sass.svg"
+                    alt="sass logo"
+                  />
+                  <span class="skills__item-title">Sass</span>
+                </div>
+              </li>
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <img
+                    class="skills__item-img"
+                    src="images/git.svg"
+                    alt="git logo"
+                  />
+                  <span class="skills__item-title">Git</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="projects" class="projects">
+          <h2 class="title" data-splitting="chars">Проекты</h2>
+          <div class="projects__inner">
+            <div class="projects__card">
+              <div class="projects__card-img">
+                <img
+                  src="/images/Card.png"
+                  alt="Card"
+                  class="projects__card-image"
+                />
+              </div>
+              <div class="projects__info">
+                <h3 class="projects__info-title">Card</h3>
+                <div class="projects__link-container">
+                  <a
+                    class="link button button-yellow"
+                    target="_blank"
+                    href="https://lelyaler.github.io/Card/"
+                  >
+                    Посетить сайт
+                  </a>
+                  <a
+                    class="link button"
+                    target="_blank"
+                    href="https://github.com/Lelyaler/Card"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="projects__card">
+              <div class="projects__card-img">
+                <img
+                  src="images/Cyberpunk.jpg"
+                  alt="Cyberpunk-img"
+                  class="projects__card-image"
+                />
+              </div>
+              <div class="projects__info">
+                <h3 class="projects__info-title">Cyberpunk</h3>
+                <div class="projects__link-container">
+                  <a
+                    class="link button button-yellow"
+                    target="_blank"
+                    href="https://lelyaler.github.io/Cyberpunk-website/"
+                  >
+                    Посетить сайт
+                  </a>
+                  <a
+                    class="link button"
+                    target="_blank"
+                    href="https://github.com/Lelyaler/Cyberpunk-website"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="projects__card">
+              <div class="projects__card-img">
+                <img
+                  src="images/Travel.jpg"
+                  alt="Travel-img"
+                  class="projects__card-image"
+                />
+              </div>
+              <div class="projects__info">
+                <h3 class="projects__info-title">Travel</h3>
+                <div class="projects__link-container">
+                  <a
+                    class="link button button-yellow"
+                    target="_blank"
+                    href="https://lelyaler.github.io/Travel-website/"
+                  >
+                    Посетить сайт
+                  </a>
+                  <a
+                    class="link button"
+                    target="_blank"
+                    href="https://github.com/Lelyaler/Travel-website"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="projects__card">
+              <div class="projects__card-img">
+                <img
+                  src="images/Tailwind.png"
+                  alt="Tailwind-img"
+                  class="projects__card-image"
+                />
+              </div>
+              <div class="projects__info">
+                <h3 class="projects__info-title">Tailwind</h3>
+                <div class="projects__link-container">
+                  <a
+                    class="link button button-yellow"
+                    target="_blank"
+                    href="https://lelyaler.github.io/tailwind-site/"
+                  >
+                    Посетить сайт
+                  </a>
+                  <a
+                    class="link button"
+                    target="_blank"
+                    href="https://github.com/Lelyaler/tailwind-site"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="projects__card">
+              <div class="projects__card-img">
+                <img
+                  src="images/WaveRider.jpg"
+                  alt="WaveRider-img"
+                  class="projects__card-image"
+                />
+              </div>
+              <div class="projects__info">
+                <h3 class="projects__info-title">WaveRider</h3>
+                <div class="projects__link-container">
+                  <a
+                    class="link button button-yellow"
+                    target="_blank"
+                    href="https://lelyaler.github.io/WaveRider-website/"
+                  >
+                    Посетить сайт
+                  </a>
+                  <a
+                    class="link button"
+                    target="_blank"
+                    href="https://github.com/Lelyaler/WaveRider-website"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+              <!-- <div class="projects__card">
+              <div class="projects__card-img">
+                <img
+                  src="./images/quiz1.png"
+                  alt="geoquiz-img"
+                  class="projects__card-image"
+                />
+              </div> -->
+              <!-- <div class="projects__info">
+                <h3 class="projects__info-title">Geo Quiz</h3>
+                <span class="projects__info-tech"
+                  >Technologies: React, CSS3, JS</span
+                >
+                <div class="projects__link-container">
+                  <a
+                    class="link button button-yellow"
+                    target="_blank"
+                    href="https://lilsant.github.io/quizi.github.io/"
+                  >
+                    Посетить сайт
+                  </a>
+                  <a
+                    class="link button"
+                    target="_blank"
+                    href="https://github.com/Lilsant/quiz"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div> -->
+            </div>
+            <div class="projects__card">
+              <div class="projects__card-img">
+                <img
+                  src="images/Legal.png"
+                  alt="Legal-img"
+                  class="projects__card-image"
+                />
+              </div>
+              <div class="projects__info">
+                <h3 class="projects__info-title">Legal</h3>
+                <div class="projects__link-container">
+                  <a
+                    class="link button button-yellow"
+                    target="_blank"
+                    href="https://lelyaler.github.io/Legal-website/"
+                  >
+                    Посетить сайт
+                  </a>
+                  <a
+                    class="link button"
+                    target="_blank"
+                    href="https://github.com/Lelyaler/Legal-website"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+              <!-- <div class="projects__card">
+              <div class="projects__card-img">
+                <img
+                  src="./images/quiz1.png"
+                  alt="geoquiz-img"
+                  class="projects__card-image"
+                />
+              </div> -->
+              <!-- <div class="projects__info">
+                <h3 class="projects__info-title">Geo Quiz</h3>
+                <span class="projects__info-tech"
+                  >Technologies: React, CSS3, JS</span
+                >
+                <div class="projects__link-container">
+                  <a
+                    class="link button button-yellow"
+                    target="_blank"
+                    href="https://lilsant.github.io/quizi.github.io/"
+                  >
+                    Посетить сайт
+                  </a>
+                  <a
+                    class="link button"
+                    target="_blank"
+                    href="https://github.com/Lilsant/quiz"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
