@@ -452,10 +452,12 @@ body {
 }
 .projects__card-img {
   width: 100%;
+
   margin-bottom: 0.625rem;
 }
 .projects__card-image {
   width: 100%;
+  height: 13em;
 }
 .projects__info {
   -moz-text-align-last: left;
@@ -497,8 +499,8 @@ body {
   }
   .container {
     width: 100%;
-    padding-right: 6.25rem;
-    padding-left: 6.25rem;
+    padding-right: 2.25rem;
+    padding-left: 2.25rem;
   }
   .projects__link-container {
     flex-direction: column;
@@ -545,8 +547,8 @@ body {
 }
 @media screen and (max-width: 660px) {
   .container {
-    padding-left: 3.25rem;
-    padding-right: 3.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   html {
     font-size: 2.1212121212vw;
@@ -562,7 +564,7 @@ body {
     width: 80%;
   }
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 650px) {
   html {
     font-size: 2.4137931034vw;
   }
@@ -595,12 +597,11 @@ body {
   .header__nav {
     display: none;
   }
+  .projects__card-image {
+    height: auto;
+  }
 }
 @media screen and (max-width: 430px) {
-  .container {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-  }
   html {
     font-size: 3.2558139535vw;
   }
