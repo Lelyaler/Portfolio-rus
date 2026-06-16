@@ -430,14 +430,16 @@ body {
 .skills__list {
   display: flex;
   justify-content: center;
-  margin-top: 1.5625rem;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  max-width: 65.625rem;
+  margin: 1.5625rem auto 0;
   padding-inline-start: 0rem;
   opacity: 0;
   transform: translateY(100%);
 }
 .skills__list-item {
-  margin-right: 0.3125rem;
-  margin-left: 0.3125rem;
+  display: flex;
 }
 .skills__list-item-inner {
   perspective: 12.5rem;
@@ -547,9 +549,7 @@ body {
     font-size: 1.4893617021vw;
   }
   .skills__list {
-    flex-wrap: wrap;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
   }
   .skills__list-item {
     flex-basis: 30%;
