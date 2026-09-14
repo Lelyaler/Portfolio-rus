@@ -339,18 +339,21 @@ body {
 .information {
   margin-top: 2.25rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
 }
 
 .information__image {
   width: 28.75rem;
   height: 25.9375rem;
+  flex-shrink: 0;
 }
 .information__about {
-  padding-top: 50px;
+  max-width: 32rem;
 }
 .information__title {
-  width: 60%;
+  width: 100%;
   line-height: 2.7rem;
 }
 .information__subtitle {
