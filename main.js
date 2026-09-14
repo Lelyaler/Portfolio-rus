@@ -231,3 +231,42 @@ skillsArr.forEach((skill) => {
     }, 1500);
   });
 });
+
+const expandBtn = document.getElementById("about-expand-btn");
+const aboutMore = document.getElementById("about-more");
+if (expandBtn && aboutMore) {
+  expandBtn.addEventListener("click", () => {
+    const isOpen = aboutMore.classList.toggle("is-open");
+    expandBtn.classList.toggle("is-open", isOpen);
+    const btnText = expandBtn.querySelector(".about__expand-btn-text");
+    if (btnText) {
+      btnText.textContent = isOpen ? "Свернуть" : "Читать полностью";
+    }
+    if (typeof ScrollTrigger !== "undefined") {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 400);
+    }
+  });
+}
+
+const scrollTopBtn = document.getElementById("scroll-top-btn");
+if (scrollTopBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 450) {
+      scrollTopBtn.classList.add("is-visible");
+    } else {
+      scrollTopBtn.classList.remove("is-visible");
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", () => {
+    if (typeof lenis !== "undefined" && lenis) {
+      lenis.scrollTo(0);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+}
+
+
