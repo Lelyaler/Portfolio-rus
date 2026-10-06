@@ -144,12 +144,10 @@ ScrollTrigger.create({
 const typeText = document.querySelector(".information__subtitle-text"),
   pipe = document.querySelector(".pipe"),
   phraseArray = [
-    "Web Developer (pagemaker) freelancer",
-    "css-master",
-    "html-genius",
-    "js-lover",
-    "todo-builder",
-    "a cute person",
+    "Frontend Developer",
+    "React & TypeScript",
+    "WordPress & PHP",
+    "UI/UX & Web Performance",
   ];
 let textInterval = null,
   counter = 0,
