@@ -629,6 +629,56 @@ body {
 .projects__info-title {
   margin-bottom: 0.125rem;
 }
+.projects__info-desc {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  text-align: left;
+}
+
+.projects__more-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.875rem;
+}
+
+.projects__expand-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.75rem;
+  background-color: transparent;
+  color: #fdca40;
+  border: 0.0625rem solid rgba(253, 202, 64, 0.4);
+  border-radius: 2rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.projects__expand-btn:hover {
+  background-color: rgba(253, 202, 64, 0.1);
+  border-color: #fdca40;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.projects__expand-btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.projects__expand-btn.is-open .projects__expand-btn-icon {
+  transform: rotate(180deg);
+}
+
+.projects__card--hidden {
+  display: none !important;
+}
 
 .animated-skill {
   animation: skill_card 1.5s 1;

@@ -124,7 +124,7 @@ ScrollTrigger.create({
   once: true,
   // markers: true,
   onEnter: () => {
-    gsap.to(".projects__card", {
+    gsap.to(".projects__card:not(.projects__card--hidden)", {
       y: 0,
       // stagger: 0.03,
       opacity: 1,
@@ -263,6 +263,55 @@ if (scrollTopBtn) {
       lenis.scrollTo(0);
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+}
+
+const projectsExpandBtn = document.getElementById("projects-expand-btn");
+const extraProjectCards = document.querySelectorAll(".projects__card--extra");
+
+if (projectsExpandBtn && extraProjectCards.length) {
+  let isProjectsOpen = false;
+  projectsExpandBtn.addEventListener("click", () => {
+    isProjectsOpen = !isProjectsOpen;
+    projectsExpandBtn.classList.toggle("is-open", isProjectsOpen);
+    const btnText = projectsExpandBtn.querySelector(".projects__expand-btn-text");
+    if (btnText) {
+      btnText.textContent = isProjectsOpen
+        ? "Свернуть архив проектов"
+        : `Показать все проекты (ещё ${extraProjectCards.length})`;
+    }
+
+    extraProjectCards.forEach((card, index) => {
+      if (isProjectsOpen) {
+        card.classList.remove("projects__card--hidden");
+        gsap.fromTo(
+          card,
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+            delay: index * 0.04,
+            ease: "circ.out",
+          }
+        );
+      } else {
+        gsap.to(card, {
+          y: 20,
+          opacity: 0,
+          duration: 0.25,
+          onComplete: () => {
+            card.classList.add("projects__card--hidden");
+          },
+        });
+      }
+    });
+
+    if (typeof ScrollTrigger !== "undefined") {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 350);
     }
   });
 }
