@@ -165,7 +165,6 @@ const typeText = document.querySelector(".information__subtitle-text"),
   pipe = document.querySelector(".pipe"),
   phraseArray = [
     "Frontend Developer",
-    "React & TypeScript",
     "WordPress & PHP",
     "UI/UX & Web Performance",
   ];
