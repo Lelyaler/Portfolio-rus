@@ -18,10 +18,11 @@
     <link
       rel="preload"
       as="image"
-      href="./images/wwww.png"
+      href="./images/wwww.webp"
+      type="image/webp"
       fetchpriority="high"
     />
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="style.css?v=3" />
     <title>Валерия Чернявская — Frontend Developer Portfolio</title>
     <meta
       name="description"
@@ -52,16 +53,11 @@
     />
     <meta name="twitter:image" content="https://lelyaler.github.io/Portfolio-rus/images/og-preview.png" />
     <meta name="theme-color" content="#171717" />
-    <script src="./npm/gsap%403.12.5/dist/gsap.min.js"></script>
-    <script src="./%40studio-freight/lenis%401.0.39/dist/lenis.min.js"></script>
-    <script src="./ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="./splitting%401.0.6/dist/splitting.min.js"></script>
     <link rel="stylesheet" href="./splitting%401.0.6/dist/splitting.css" />
-
-    <link
-      rel="stylesheet"
-      href="./splitting%401.0.6/dist/splitting-cells.css"
-    />
+    <script defer src="./npm/gsap%403.12.5/dist/gsap.min.js"></script>
+    <script defer src="./%40studio-freight/lenis%401.0.39/dist/lenis.min.js"></script>
+    <script defer src="./ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="./splitting%401.0.6/dist/splitting.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -123,7 +119,7 @@
           </div>
           <img
             class="information__image"
-            src="./images/wwww.png"
+            src="./images/wwww.webp"
             alt="Валерия Чернявская"
             width="460"
             height="415"
@@ -196,7 +192,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/html.svg"
-                    alt="HTML5"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -209,7 +206,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/css.svg"
-                    alt="CSS3"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -222,7 +220,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/javascript.svg"
-                    alt="JavaScript"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -236,7 +235,8 @@
                     <img
                       class="skills__item-img"
                       src="./images/typescript.svg"
-                      alt="TypeScript"
+                      alt=""
+                      aria-hidden="true"
                       width="60"
                       height="62"
                       loading="lazy"
@@ -250,7 +250,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/react.svg"
-                    alt="React"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -263,7 +264,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/wordpress.svg"
-                    alt="WordPress"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -276,7 +278,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/php.png"
-                    alt="PHP"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -289,7 +292,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/git.svg"
-                    alt="Git"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -302,7 +306,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/free-icon-docker-919853.png"
-                    alt="Docker"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -315,7 +320,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/gitlab (1).svg"
-                    alt="GitLab CI"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -328,7 +334,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/webpack-original.svg"
-                    alt="Webpack"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -341,7 +348,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/vite.png"
-                    alt="Vite"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -354,7 +362,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/tailwind.svg"
-                    alt="Tailwind"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -367,7 +376,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/sass.svg"
-                    alt="Sass"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -380,7 +390,8 @@
                   <img
                     class="skills__item-img"
                     src="./images/gulp.svg"
-                    alt="Gulp"
+                    alt=""
+                    aria-hidden="true"
                     width="60"
                     height="62"
                     loading="lazy"
@@ -397,9 +408,11 @@
             <div class="projects__card">
               <div class="projects__card-img">
                 <img
-                  src="./images/nova-fintech.png"
+                  src="./images/nova-fintech.webp"
                   alt="NOVA Pay"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -438,9 +451,11 @@
             <div class="projects__card">
               <div class="projects__card-img">
                 <img
-                  src="./images/Security-Operations.png"
+                  src="./images/Security-Operations.webp"
                   alt="Cybersecurity Operations Center"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -481,9 +496,11 @@
             <div class="projects__card">
               <div class="projects__card-img">
                 <img
-                  src="./images/game-vault.png"
+                  src="./images/game-vault.webp"
                   alt="GameVault"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -522,9 +539,11 @@
             <div class="projects__card">
               <div class="projects__card-img">
                 <img
-                  src="./images/techwear.png"
+                  src="./images/techwear.webp"
                   alt="Techwear Store"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -563,9 +582,11 @@
             <div class="projects__card">
               <div class="projects__card-img">
                 <img
-                  src="./images/Cyberpunk.jpg"
+                  src="./images/Cyberpunk.webp"
                   alt="Cyberpunk Promo"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -604,9 +625,11 @@
             <div class="projects__card">
               <div class="projects__card-img">
                 <img
-                  src="./images/Tailwind.png"
+                  src="./images/Tailwind.webp"
                   alt="Edufree EdTech Landing"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -645,9 +668,11 @@
             <div class="projects__card projects__card--extra projects__card--hidden">
               <div class="projects__card-img">
                 <img
-                  src="./images/pg.png"
+                  src="./images/pg.webp"
                   alt="Crypto-sticky"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -686,9 +711,11 @@
             <div class="projects__card projects__card--extra projects__card--hidden">
               <div class="projects__card-img">
                 <img
-                  src="./images/Legal.png"
+                  src="./images/Legal.webp"
                   alt="Legal Services"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -727,9 +754,11 @@
             <div class="projects__card projects__card--extra projects__card--hidden">
               <div class="projects__card-img">
                 <img
-                  src="./images/headphone.png"
+                  src="./images/headphone.webp"
                   alt="Headphone Showcase"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -768,9 +797,11 @@
             <div class="projects__card projects__card--extra projects__card--hidden">
               <div class="projects__card-img">
                 <img
-                  src="./images/Travel.jpg"
+                  src="./images/Travel.webp"
                   alt="Travel Explore"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -807,9 +838,11 @@
             <div class="projects__card projects__card--extra projects__card--hidden">
               <div class="projects__card-img">
                 <img
-                  src="./images/sneakmax.png"
+                  src="./images/sneakmax.webp"
                   alt="Sneakmax Sneaker Store"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -846,9 +879,11 @@
             <div class="projects__card projects__card--extra projects__card--hidden">
               <div class="projects__card-img">
                 <img
-                  src="./images/WaveRider.jpg"
+                  src="./images/WaveRider.webp"
                   alt="WaveRider Surf Club"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -885,9 +920,11 @@
             <div class="projects__card projects__card--extra projects__card--hidden">
               <div class="projects__card-img">
                 <img
-                  src="./images/Animation-web.png"
+                  src="./images/Animation-web.webp"
                   alt="Creative Animation Showcase"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -926,9 +963,11 @@
             <div class="projects__card projects__card--extra projects__card--hidden">
               <div class="projects__card-img">
                 <img
-                  src="./images/event.png"
+                  src="./images/event.webp"
                   alt="Event Agency"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -967,9 +1006,11 @@
             <div class="projects__card projects__card--extra projects__card--hidden">
               <div class="projects__card-img">
                 <img
-                  src="./images/hike.png"
+                  src="./images/hike.webp"
                   alt="Hike Travel Promo"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -1008,9 +1049,11 @@
             <div class="projects__card projects__card--extra projects__card--hidden">
               <div class="projects__card-img">
                 <img
-                  src="./images/5051.png"
+                  src="./images/5051.webp"
                   alt="505 Project"
                   class="projects__card-image"
+                  width="380"
+                  height="215"
                   loading="lazy"
                   decoding="async"
                 />
@@ -1080,7 +1123,8 @@
                   <img
                     src="./images/smile.svg"
                     class="about__contacts-icon"
-                    alt="Имя"
+                    alt=""
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     loading="lazy"
@@ -1097,7 +1141,8 @@
                     <img
                       src="./images/mail.svg"
                       class="about__contacts-icon"
-                      alt="Почта"
+                      alt=""
+                      aria-hidden="true"
                       width="24"
                       height="24"
                       loading="lazy"
@@ -1115,7 +1160,8 @@
                     <img
                       src="./images/telegram.svg"
                       class="about__contacts-icon"
-                      alt="Telegram"
+                      alt=""
+                      aria-hidden="true"
                       width="24"
                       height="24"
                       loading="lazy"
@@ -1133,7 +1179,8 @@
                     <img
                       src="./images/phone.svg"
                       class="about__contacts-icon"
-                      alt="Телефон"
+                      alt=""
+                      aria-hidden="true"
                       width="24"
                       height="24"
                       loading="lazy"
@@ -1151,7 +1198,8 @@
                     <img
                       src="./images/instagram.svg"
                       class="about__contacts-icon"
-                      alt="Instagram"
+                      alt=""
+                      aria-hidden="true"
                       width="24"
                       height="24"
                       loading="lazy"
@@ -1190,6 +1238,6 @@
         <polyline points="18 15 12 9 6 15"></polyline>
       </svg>
     </button>
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
   </body>
 </html>
