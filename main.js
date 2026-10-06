@@ -139,6 +139,26 @@ ScrollTrigger.create({
   },
 });
 
+ScrollTrigger.create({
+  trigger: ".contacts",
+  start: "top bottom-=150",
+  once: true,
+  onEnter: () => {
+    gsap.to(".contacts h2 .char", {
+      stagger: 0.03,
+      opacity: 1,
+      ease: "power2.inOut",
+    });
+    gsap.to(".contacts__list li", {
+      y: 0,
+      opacity: 1,
+      ease: "circ.out",
+      duration: 0.8,
+      stagger: 0.05,
+    });
+  },
+});
+
 // // scroll
 
 const typeText = document.querySelector(".information__subtitle-text"),
@@ -314,6 +334,36 @@ if (projectsExpandBtn && extraProjectCards.length) {
       }, 350);
     }
   });
+}
+
+const navItems = document.querySelectorAll(".header__nav-item");
+const navSections = document.querySelectorAll("main section[id]");
+
+if (navItems.length && navSections.length) {
+  const updateScrollSpy = () => {
+    const scrollPosition = window.scrollY + 250;
+    let currentId = "";
+
+    navSections.forEach((section) => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        currentId = section.getAttribute("id");
+      }
+    });
+
+    navItems.forEach((item) => {
+      const link = item.querySelector(".header__nav-link");
+      if (link && link.getAttribute("href") === `#${currentId}`) {
+        item.classList.add("is-active");
+      } else {
+        item.classList.remove("is-active");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", updateScrollSpy, { passive: true });
+  updateScrollSpy();
 }
 
 

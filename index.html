@@ -10,6 +10,17 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/wwww.png"
+      fetchpriority="high"
+    />
     <link rel="stylesheet" href="style.css?v=2" />
     <title>Валерия Чернявская — Frontend Developer Portfolio</title>
     <meta
@@ -64,10 +75,10 @@
               <a href="#about" class="header__nav-link">Обо мне</a>
             </li>
             <li class="header__nav-item">
-              <a href="#projects" class="header__nav-link">Проекты</a>
+              <a href="#skills" class="header__nav-link">Навыки</a>
             </li>
             <li class="header__nav-item">
-              <a href="#skills" class="header__nav-link">Навыки</a>
+              <a href="#projects" class="header__nav-link">Проекты</a>
             </li>
             <li class="header__nav-item">
               <a href="#contacts" class="header__nav-link">Контакты</a>
@@ -79,12 +90,14 @@
             class="button button-yellow header__btn header__btn--anketa"
             href="https://lelyaler.github.io/anketa/"
             target="_blank"
+            rel="noopener noreferrer"
             >Анкета</a
           >
           <a
             class="button header__btn header__btn--cv"
             href="https://lelyaler.github.io/cv/"
             target="_blank"
+            rel="noopener noreferrer"
             >CV</a
           >
         </div>
@@ -111,7 +124,10 @@
           <img
             class="information__image"
             src="./images/wwww.png"
-            alt="main img"
+            alt="Валерия Чернявская"
+            width="460"
+            height="415"
+            fetchpriority="high"
           />
         </section>
 
@@ -119,134 +135,35 @@
           <div class="about__main">
             <h2 class="title" data-splitting="chars">Обо мне</h2>
             <p class="about__description" data-splitting="words">
-              Frontend-разработчик с трёхлетним опытом в веб-разработке.
-             
+              Frontend-разработчик с 3 годами коммерческого опыта в веб-разработке. Создаю быстрые, интерактивные и адаптивные веб-приложения на React, TypeScript, JavaScript и WordPress/PHP.
             </p>
             <p class="about__description" data-splitting="words">
-              Работала в
-              <strong>MaxBitSolution (iGaming, резидент ПВТ)</strong>:
-              разрабатывала адаптивные интерфейсы, создавала и кастомизировала
-              темы и плагины WordPress. Писала кастомные темы на
-              объектно-ориентированном PHP (WP_Query, $wpdb, Composer PSR-4) с
-              разделением логики, данных и шаблонов. Создавала блоки и паттерны
-              Gutenberg, работала с REST API и PHP-хуками. Занималась
-              производительностью фронтенда: оптимизация Core Web Vitals,
-              разметка Schema.org (JSON-LD), настройка метатегов.<br />
-            </p>
-            <p class="about__description" data-splitting="words">
-              Технологии осваивала самостоятельно и сразу применяла на практике.
-              Системно использую прикладной AI как вспомогательный инструмент в
-              работе.<br />
+              Работала в <strong>MaxBitSolution (iGaming, резидент ПВТ)</strong>: проектировала компонентную архитектуру, разрабатывала и кастомизировала темы и плагины WordPress. Писала кастомные темы на объектно-ориентированном PHP (WP_Query, $wpdb, Composer PSR-4) с разделением логики, данных и шаблонов. Создавала кастомные Gutenberg-блоки, интегрировала REST API и PHP-хуки. Системно оптимизировала производительность: Core Web Vitals 90+, семантическая разметка Schema.org (JSON-LD) и SEO-метатеги.
             </p>
             <div class="about__more" id="about-more">
               <p class="about__description" data-splitting="words">
-                Беру проекты на фрилансе - делаю сайты «под ключ» для малого и
-                среднего бизнеса. Создаю кастомные темы WordPress и магазины
-                WooCommerce с нуля, без готовых шаблонов и конструкторов.
-                Подключаю платёжные API, обеспечиваю веб-безопасность
-                (валидация, экранирование, защита от XSS и SQL-инъекций).
-                Разрабатываю проекты на <strong>React</strong>: компоненты,
-                хуки, роутинг, работа с REST API. Верстаю из Figma с Pixel
-                Perfect и Mobile First. Уделяю внимание производительности: Core
-                Web Vitals, скорость загрузки, чистая разметка, базовая
-                настройка метатегов.<br />
+                На фрилансе разрабатываю проекты «под ключ»: от интерактивных SPA до интернет-магазинов на WooCommerce. Создаю чистый поддерживаемый код с акцентом на безопасность (валидация, экранирование, защита от XSS и CSRF) и максимальную скорость загрузки.
               </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Что могу закрыть:</strong><br />
-              </p>
-              
-              <p class="about__description" data-splitting="words">
-                <strong>JavaScript-интерактив:</strong> DOM, события,
-                динамические элементы, async/await.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Адаптивная вёрстка из Figma:</strong> Pixel Perfect,
-                Mobile First, все устройства и браузеры.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Задачи на стыке WordPress и фронтенда:</strong> от
-                кастомной темы до React-компонента.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Оптимизация производительности:</strong> Core Web
-                Vitals, скорость загрузки, чистая разметка, базовая настройка
-                метатегов.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Деплой:</strong> доведу задачу от анализа до деплоя
-                через GitLab CI.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Мои ключевые навыки:</strong><br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>JavaScript (ES6+):</strong> работа с DOM, создание
-                интерактивных элементов, события, async/await, fetch.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>React:</strong> компоненты, JSX, хуки, роутинг, работа с
-                REST API, управление состоянием.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>HTML и CSS:</strong> семантический HTML, методология
-                БЭМ, mobile-first подход, чистый и поддерживаемый код.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Адаптивная вёрстка:</strong> сайты корректно работают на
-                всех устройствах и во всех браузерах - даже если адаптивность не
-                предусмотрена в макете.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>CSS Grid и Flexbox:</strong> гибкие и адаптивные
-                макеты.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>CSS-препроцессоры:</strong> SCSS - модульный и
-                масштабируемый код.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>CSS-фреймворки:</strong> Tailwind CSS - быстрая
-                разработка интерфейсов.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Инструменты сборки:</strong> Vite, Webpack -
-                автоматизация, оптимизация, минификация.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>REST API:</strong> работа с внешними и WordPress API.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>WordPress и PHP:</strong> разработка тем с нуля,
-                кастомизация шаблонов, настройка функционала на PHP, разработка
-                плагинов. REST API, Rewrite API, WP_Query, $wpdb, HTTP API,
-                WordPress Hooks (actions &amp; filters). Принципы OOP. Кастомные
-                Gutenberg-блоки. Composer autoloading (PSR-4).<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>MySQL:</strong> работа с базой данных.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Docker:</strong> создание и управление контейнерами,
-                изолированные среды для разработки и тестирования.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Git и GitLab CI:</strong> контроль версий, автоматизация
-                сборки, тестирования и деплоя.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Хостинг и деплой:</strong> настройка хостинга, SSL,
-                управление доменами/DNS, деплой (shared hosting, VPS).<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Инструменты дизайна:</strong> Figma.<br />
-              </p>
-              <p class="about__description" data-splitting="words">
-                <strong>Стек:</strong> JavaScript (ES6+), React (hooks, routing,
-                state management), HTML/CSS (SCSS, Tailwind, БЭМ), REST API,
-                WordPress, WooCommerce, PHP (OOP, WP_Query, $wpdb, Composer
-                PSR-4), Gutenberg, MySQL, Docker, GitLab CI, Git. Дополнительно:
-                TypeScript.<br />
-              </p>
+              <div class="about__competencies">
+                <div class="about__competency-card">
+                  <h3 class="about__competency-title">Frontend & Интерактив</h3>
+                  <p class="about__competency-desc">
+                    React (хуки, роутинг, управление состоянием), TypeScript, современный ES6+, семантическая вёрстка по БЭМ, сложные анимации (GSAP, ScrollTrigger, CSS 3D), Pixel Perfect и Mobile First.
+                  </p>
+                </div>
+                <div class="about__competency-card">
+                  <h3 class="about__competency-title">WordPress & Backend</h3>
+                  <p class="about__competency-desc">
+                    Разработка тем с нуля на ООП PHP, кастомные блоки Gutenberg, плагины, WP_Query, $wpdb, Rewrite API, WooCommerce, платёжные API и интеграции по REST API.
+                  </p>
+                </div>
+                <div class="about__competency-card">
+                  <h3 class="about__competency-title">Инструменты & DevOps</h3>
+                  <p class="about__competency-desc">
+                    Изоляция окружений в Docker, автоматизация сборок и деплоя через GitLab CI, бандлеры Vite и Webpack, контроль версий в Git, оптимизация Core Web Vitals и веб-доступность.
+                  </p>
+                </div>
+              </div>
             </div>
             <button
               class="about__expand-btn"
@@ -269,87 +186,6 @@
               </svg>
             </button>
           </div>
-          <div id="contacts" class="about__contacts">
-            <ul class="about__list">
-              <li class="about__list-item">
-                <div class="about__contacts-img">
-                  <img
-                    src="./images/smile.svg"
-                    class="about__contacts-icon"
-                    alt="smile img"
-                  />
-                </div>
-                <div class="about__contacts-info">
-                  <h3 class="about__contacts-title">Имя</h3>
-                  <span class="about__contacts-description"
-                    >Валерия Чернявская</span
-                  >
-                </div>
-              </li>
-              <li class="about__list-item">
-                <div class="about__contacts-img">
-                  <a href="mailto:lelyaler@gmail.com">
-                    <img
-                      src="./images/mail.svg"
-                      class="about__contacts-icon"
-                      alt="mail img"
-                    />
-                  </a>
-                </div>
-                <div class="about__contacts-info">
-                  <h3 class="about__contacts-title">Почта</h3>
-                  <a href="mailto:lelyaler@gmail.com" class="about__contacts-description"
-                    >lelyaler@gmail.com</a
-                  >
-                </div>
-              </li>
-              <li class="about__list-item">
-                <div class="about__contacts-img">
-                  <a href="https://www.instagram.com/lelyaler" target="_blank"
-                    ><img
-                      src="./images/instagram.svg"
-                      class="about__contacts-icon"
-                      alt="instagram img"
-                  /></a>
-                </div>
-                <div class="about__contacts-info">
-                  <h3 class="about__contacts-title">Instagram</h3>
-                  <a href="https://www.instagram.com/lelyaler" target="_blank" class="about__contacts-description">@lelyaler</a>
-                </div>
-              </li>
-              <li class="about__list-item">
-                <div class="about__contacts-img">
-                  <a href="tel:+375292209426">
-                    <img
-                      src="./images/phone.svg"
-                      class="about__contacts-icon"
-                      alt="phone img"
-                    />
-                  </a>
-                </div>
-                <div class="about__contacts-info">
-                  <h3 class="about__contacts-title">Телефон</h3>
-                  <a href="tel:+375292209426" class="about__contacts-description"
-                    >+375(29) 220 94 26</a
-                  >
-                </div>
-              </li>
-              <li class="about__list-item">
-                <div class="about__contacts-img">
-                  <a href="https://t.me/lelyaler" target="_blank">
-                    <img
-                      src="./images/telegram.svg"
-                      class="about__contacts-icon"
-                      alt="telegram img"
-                  /></a>
-                </div>
-                <div class="about__contacts-info">
-                  <h3 class="about__contacts-title">Телеграм</h3>
-                  <a href="https://t.me/lelyaler" target="_blank" class="about__contacts-description">@lelyaler</a>
-                </div>
-              </li>
-            </ul>
-          </div>
         </section>
         <section id="skills" class="skills">
           <div class="skills__inner">
@@ -360,7 +196,10 @@
                   <img
                     class="skills__item-img"
                     src="./images/html.svg"
-                    alt="html logo"
+                    alt="HTML5"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
                   <span class="skills__item-title">HTML5</span>
                 </div>
@@ -369,8 +208,11 @@
                 <div class="skills__list-item-inner">
                   <img
                     class="skills__item-img"
-                    src="images/css.svg"
-                    alt="css logo"
+                    src="./images/css.svg"
+                    alt="CSS3"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
                   <span class="skills__item-title">CSS3</span>
                 </div>
@@ -380,9 +222,40 @@
                   <img
                     class="skills__item-img"
                     src="./images/javascript.svg"
-                    alt="javascript logo"
+                    alt="JavaScript"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
-                  <span class="skills__item-title">JS</span>
+                  <span class="skills__item-title">JavaScript</span>
+                </div>
+              </li>
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <div class="skills__ts-box">
+                    <img
+                      class="skills__item-img"
+                      src="./images/typescript.svg"
+                      alt="TypeScript"
+                      width="60"
+                      height="62"
+                      loading="lazy"
+                    />
+                  </div>
+                  <span class="skills__item-title">TypeScript</span>
+                </div>
+              </li>
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <img
+                    class="skills__item-img"
+                    src="./images/react.svg"
+                    alt="React"
+                    width="60"
+                    height="62"
+                    loading="lazy"
+                  />
+                  <span class="skills__item-title">React</span>
                 </div>
               </li>
               <li class="skills__list-item">
@@ -390,18 +263,23 @@
                   <img
                     class="skills__item-img"
                     src="./images/wordpress.svg"
-                    alt="wordpress logo"
+                    alt="WordPress"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
                   <span class="skills__item-title">WordPress</span>
                 </div>
               </li>
-
               <li class="skills__list-item">
                 <div class="skills__list-item-inner">
                   <img
                     class="skills__item-img"
                     src="./images/php.png"
-                    alt="php logo"
+                    alt="PHP"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
                   <span class="skills__item-title">PHP</span>
                 </div>
@@ -410,19 +288,11 @@
                 <div class="skills__list-item-inner">
                   <img
                     class="skills__item-img"
-                    src="./images/react.svg"
-                    alt="react logo"
-                  />
-                  <span class="skills__item-title">React</span>
-                </div>
-              </li>
-
-              <li class="skills__list-item">
-                <div class="skills__list-item-inner">
-                  <img
-                    class="skills__item-img"
                     src="./images/git.svg"
-                    alt="git logo"
+                    alt="Git"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
                   <span class="skills__item-title">Git</span>
                 </div>
@@ -432,7 +302,10 @@
                   <img
                     class="skills__item-img"
                     src="./images/free-icon-docker-919853.png"
-                    alt="docker logo"
+                    alt="Docker"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
                   <span class="skills__item-title">Docker</span>
                 </div>
@@ -442,9 +315,12 @@
                   <img
                     class="skills__item-img"
                     src="./images/gitlab (1).svg"
-                    alt="gitlab logo"
+                    alt="GitLab CI"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
-                  <span class="skills__item-title">Gitlab</span>
+                  <span class="skills__item-title">GitLab CI</span>
                 </div>
               </li>
               <li class="skills__list-item">
@@ -452,7 +328,10 @@
                   <img
                     class="skills__item-img"
                     src="./images/webpack-original.svg"
-                    alt="webpack logo"
+                    alt="Webpack"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
                   <span class="skills__item-title">Webpack</span>
                 </div>
@@ -462,7 +341,10 @@
                   <img
                     class="skills__item-img"
                     src="./images/vite.png"
-                    alt="vite logo"
+                    alt="Vite"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
                   <span class="skills__item-title">Vite</span>
                 </div>
@@ -471,18 +353,11 @@
                 <div class="skills__list-item-inner">
                   <img
                     class="skills__item-img"
-                    src="./images/gulp.svg"
-                    alt="gulp logo"
-                  />
-                  <span class="skills__item-title">Gulp</span>
-                </div>
-              </li>
-              <li class="skills__list-item">
-                <div class="skills__list-item-inner">
-                  <img
-                    class="skills__item-img"
                     src="./images/tailwind.svg"
-                    alt="tailwind logo"
+                    alt="Tailwind"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
                   <span class="skills__item-title">Tailwind</span>
                 </div>
@@ -492,9 +367,25 @@
                   <img
                     class="skills__item-img"
                     src="./images/sass.svg"
-                    alt="sass logo"
+                    alt="Sass"
+                    width="60"
+                    height="62"
+                    loading="lazy"
                   />
                   <span class="skills__item-title">Sass</span>
+                </div>
+              </li>
+              <li class="skills__list-item">
+                <div class="skills__list-item-inner">
+                  <img
+                    class="skills__item-img"
+                    src="./images/gulp.svg"
+                    alt="Gulp"
+                    width="60"
+                    height="62"
+                    loading="lazy"
+                  />
+                  <span class="skills__item-title">Gulp</span>
                 </div>
               </li>
             </ul>
@@ -507,8 +398,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/nova-fintech.png"
-                  alt="NOVA Pay-img"
+                  alt="NOVA Pay"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -523,14 +416,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Animation/"
+                    aria-label="Посетить сайт проекта NOVA Pay"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Animation"
+                    aria-label="Исходный код проекта NOVA Pay на GitHub"
                   >
                     GitHub
                   </a>
@@ -542,8 +439,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/Security-Operations.png"
-                  alt="Security-img"
+                  alt="Cybersecurity Operations Center"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -560,14 +459,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Security-Operations/"
+                    aria-label="Посетить сайт проекта Cybersecurity Operations Center"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Security-Operations"
+                    aria-label="Исходный код проекта Cybersecurity Operations Center на GitHub"
                   >
                     GitHub
                   </a>
@@ -579,8 +482,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/game-vault.png"
-                  alt="GameVault-img"
+                  alt="GameVault"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -595,14 +500,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/React-TypeScript/"
+                    aria-label="Посетить сайт проекта GameVault"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/React-TypeScript"
+                    aria-label="Исходный код проекта GameVault на GitHub"
                   >
                     GitHub
                   </a>
@@ -614,8 +523,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/techwear.png"
-                  alt="Techwear-img"
+                  alt="Techwear Store"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -630,14 +541,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/techwear-store/"
+                    aria-label="Посетить сайт проекта Techwear Store"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/techwear-store"
+                    aria-label="Исходный код проекта Techwear Store на GitHub"
                   >
                     GitHub
                   </a>
@@ -649,8 +564,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/Cyberpunk.jpg"
-                  alt="Cyberpunk-img"
+                  alt="Cyberpunk Promo"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -665,14 +582,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Cyberpunk-only-html-css-js-/"
+                    aria-label="Посетить сайт проекта Cyberpunk Promo"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Cyberpunk-only-html-css-js-"
+                    aria-label="Исходный код проекта Cyberpunk Promo на GitHub"
                   >
                     GitHub
                   </a>
@@ -684,8 +605,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/Tailwind.png"
-                  alt="Edufree-img"
+                  alt="Edufree EdTech Landing"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -700,14 +623,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/tailwind-site/"
+                    aria-label="Посетить сайт проекта Edufree EdTech Landing"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/tailwind-site"
+                    aria-label="Исходный код проекта Edufree EdTech Landing на GitHub"
                   >
                     GitHub
                   </a>
@@ -719,8 +646,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/pg.png"
-                  alt="Crypto-sticky-img"
+                  alt="Crypto-sticky"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -735,14 +664,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/crypto-sticky/"
+                    aria-label="Посетить сайт проекта Crypto-sticky"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/crypto-sticky"
+                    aria-label="Исходный код проекта Crypto-sticky на GitHub"
                   >
                     GitHub
                   </a>
@@ -754,8 +687,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/Legal.png"
-                  alt="Legal-img"
+                  alt="Legal Services"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -770,14 +705,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Legal-website/"
+                    aria-label="Посетить сайт проекта Legal Services"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Legal-website"
+                    aria-label="Исходный код проекта Legal Services на GitHub"
                   >
                     GitHub
                   </a>
@@ -789,8 +728,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/headphone.png"
-                  alt="Headphone"
+                  alt="Headphone Showcase"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -805,14 +746,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Headphone/"
+                    aria-label="Посетить сайт проекта Headphone Showcase"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Headphone"
+                    aria-label="Исходный код проекта Headphone Showcase на GitHub"
                   >
                     GitHub
                   </a>
@@ -824,8 +769,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/Travel.jpg"
-                  alt="Travel-img"
+                  alt="Travel Explore"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -838,14 +785,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Travel-website/"
+                    aria-label="Посетить сайт проекта Travel Explore"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Travel-website"
+                    aria-label="Исходный код проекта Travel Explore на GitHub"
                   >
                     GitHub
                   </a>
@@ -857,8 +808,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/sneakmax.png"
-                  alt="Sneakmax-img"
+                  alt="Sneakmax Sneaker Store"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -871,14 +824,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Sneakmax/"
+                    aria-label="Посетить сайт проекта Sneakmax Sneaker Store"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Sneakmax"
+                    aria-label="Исходный код проекта Sneakmax Sneaker Store на GitHub"
                   >
                     GitHub
                   </a>
@@ -890,8 +847,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/WaveRider.jpg"
-                  alt="WaveRider-img"
+                  alt="WaveRider Surf Club"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -904,14 +863,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/WaveRider-website/"
+                    aria-label="Посетить сайт проекта WaveRider Surf Club"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/WaveRider-website"
+                    aria-label="Исходный код проекта WaveRider Surf Club на GitHub"
                   >
                     GitHub
                   </a>
@@ -923,8 +886,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/Animation-web.png"
-                  alt="Animation-img"
+                  alt="Creative Animation Showcase"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -939,14 +904,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Animation-web/"
+                    aria-label="Посетить сайт проекта Creative Animation Showcase"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Animation-web"
+                    aria-label="Исходный код проекта Creative Animation Showcase на GitHub"
                   >
                     GitHub
                   </a>
@@ -958,8 +927,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/event.png"
-                  alt="Event-img"
+                  alt="Event Agency"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -974,14 +945,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Event-Agency/"
+                    aria-label="Посетить сайт проекта Event Agency"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Event-Agency"
+                    aria-label="Исходный код проекта Event Agency на GitHub"
                   >
                     GitHub
                   </a>
@@ -993,8 +968,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/hike.png"
-                  alt="hike"
+                  alt="Hike Travel Promo"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -1009,14 +986,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/hike/"
+                    aria-label="Посетить сайт проекта Hike Travel Promo"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/hike"
+                    aria-label="Исходный код проекта Hike Travel Promo на GitHub"
                   >
                     GitHub
                   </a>
@@ -1028,8 +1009,10 @@
               <div class="projects__card-img">
                 <img
                   src="./images/5051.png"
-                  alt="505-img"
+                  alt="505 Project"
                   class="projects__card-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="projects__info">
@@ -1042,14 +1025,18 @@
                   <a
                     class="link button button-yellow"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://lelyaler.github.io/505/"
+                    aria-label="Посетить сайт проекта 505"
                   >
                     Посетить сайт
                   </a>
                   <a
                     class="link button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/505"
+                    aria-label="Исходный код проекта 505 на GitHub"
                   >
                     GitHub
                   </a>
@@ -1080,6 +1067,108 @@
             </button>
           </div>
         </section>
+
+        <section id="contacts" class="contacts">
+          <div class="contacts__inner">
+            <h2 class="title" data-splitting="chars">Контакты</h2>
+            <p class="contacts__subtitle">
+              Открыта к интересным предложениям о сотрудничестве, сложным фронтенд-проектам и коммерческой разработке.
+            </p>
+            <ul class="contacts__list">
+              <li class="about__list-item">
+                <div class="about__contacts-img">
+                  <img
+                    src="./images/smile.svg"
+                    class="about__contacts-icon"
+                    alt="Имя"
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="about__contacts-info">
+                  <h3 class="about__contacts-title">Имя</h3>
+                  <span class="about__contacts-description">Валерия Чернявская</span>
+                </div>
+              </li>
+              <li class="about__list-item">
+                <div class="about__contacts-img">
+                  <a href="mailto:lelyaler@gmail.com" aria-label="Написать на электронную почту">
+                    <img
+                      src="./images/mail.svg"
+                      class="about__contacts-icon"
+                      alt="Почта"
+                      width="24"
+                      height="24"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="about__contacts-info">
+                  <h3 class="about__contacts-title">Почта</h3>
+                  <a href="mailto:lelyaler@gmail.com" class="about__contacts-description">lelyaler@gmail.com</a>
+                </div>
+              </li>
+              <li class="about__list-item">
+                <div class="about__contacts-img">
+                  <a href="https://t.me/lelyaler" target="_blank" rel="noopener noreferrer" aria-label="Связаться в Telegram">
+                    <img
+                      src="./images/telegram.svg"
+                      class="about__contacts-icon"
+                      alt="Telegram"
+                      width="24"
+                      height="24"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="about__contacts-info">
+                  <h3 class="about__contacts-title">Телеграм</h3>
+                  <a href="https://t.me/lelyaler" target="_blank" rel="noopener noreferrer" class="about__contacts-description">@lelyaler</a>
+                </div>
+              </li>
+              <li class="about__list-item">
+                <div class="about__contacts-img">
+                  <a href="tel:+375292209426" aria-label="Позвонить по телефону">
+                    <img
+                      src="./images/phone.svg"
+                      class="about__contacts-icon"
+                      alt="Телефон"
+                      width="24"
+                      height="24"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="about__contacts-info">
+                  <h3 class="about__contacts-title">Телефон</h3>
+                  <a href="tel:+375292209426" class="about__contacts-description">+375(29) 220 94 26</a>
+                </div>
+              </li>
+              <li class="about__list-item">
+                <div class="about__contacts-img">
+                  <a href="https://www.instagram.com/lelyaler" target="_blank" rel="noopener noreferrer" aria-label="Открыть профиль Instagram">
+                    <img
+                      src="./images/instagram.svg"
+                      class="about__contacts-icon"
+                      alt="Instagram"
+                      width="24"
+                      height="24"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="about__contacts-info">
+                  <h3 class="about__contacts-title">Instagram</h3>
+                  <a href="https://www.instagram.com/lelyaler" target="_blank" rel="noopener noreferrer" class="about__contacts-description">@lelyaler</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <footer class="footer">
+          <p class="footer__copy">© 2026 Валерия Чернявская. Frontend Developer Portfolio.</p>
+        </footer>
       </main>
     </div>
     <button

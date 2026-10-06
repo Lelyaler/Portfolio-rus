@@ -264,8 +264,12 @@ body {
   background-color: #fdca40;
   transition: all 0.5s;
 }
+.header__nav-item.is-active::after,
 .header__nav-item:hover::after {
   width: 100%;
+}
+.header__nav-item.is-active .header__nav-link {
+  color: #fdca40;
 }
 .header__nav-list {
   display: flex;
@@ -274,6 +278,7 @@ body {
 .header__nav-link {
   color: #f9f9f9;
   font-size: 1.125rem;
+  transition: color 0.3s ease;
 }
 
 .header__actions {
@@ -471,6 +476,39 @@ body {
 .about__expand-btn.is-open .about__expand-btn-icon {
   transform: rotate(180deg);
 }
+
+.about__competencies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+.about__competency-card {
+  background-color: #121212;
+  border: 0.0625rem solid #262626;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+.about__competency-card:hover {
+  border-color: rgba(253, 202, 64, 0.4);
+  background-color: #161616;
+}
+.about__competency-title {
+  color: #fdca40;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.about__competency-desc {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 .about__list {
   display: flex;
   justify-content: space-between;
@@ -517,6 +555,36 @@ body {
   color: #828282;
 }
 
+.contacts {
+  text-align: center;
+  padding-top: 6.25rem;
+  padding-bottom: 4rem;
+}
+.contacts__subtitle {
+  color: #828282;
+  font-size: 1rem;
+  max-width: 40rem;
+  margin: 1rem auto 2.5rem;
+  line-height: 1.6;
+}
+.contacts__list {
+  display: flex;
+  justify-content: center;
+  gap: 2.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  padding-inline-start: 0;
+  margin: 0 auto;
+}
+.footer {
+  text-align: center;
+  padding: 2rem 0 2.5rem;
+  border-top: 0.0625rem solid #222;
+  color: #666;
+  font-size: 0.875rem;
+}
+
 .title {
   font-weight: 700;
   font-size: 1.5rem;
@@ -532,18 +600,13 @@ body {
 }
 .skills__list {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.25rem;
   max-width: 75rem;
   margin: 1.5625rem auto 0;
   padding-inline-start: 0rem;
   opacity: 0;
   transform: translateY(100%);
-}
-@media screen and (min-width: 941px) {
-  .skills__list-item:nth-child(13) {
-    grid-column: 3;
-  }
 }
 .skills__list-item {
   display: flex;
@@ -750,6 +813,10 @@ body {
   }
   .projects__card {
     width: 46%;
+  }
+  .about__competencies {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 @media screen and (max-width: 750px) {
