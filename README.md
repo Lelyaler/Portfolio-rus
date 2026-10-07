@@ -1,1 +1,1 @@
- https://lelyaler.github.io/Portfolio-rus/
+ https://lelyaler.github.io/Portfolio/
