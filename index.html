@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('portfolio_lang');
+          var navLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+          var lang = saved || (navLang.toLowerCase().startsWith('ru') ? 'ru' : 'en');
+          document.documentElement.lang = lang;
+          window.__initialLang = lang;
+        } catch (e) {
+          document.documentElement.lang = 'ru';
+          window.__initialLang = 'ru';
+        }
+      })();
+    </script>
     <link
       rel="icon"
       type="image/png"
@@ -68,16 +82,16 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="#about" class="header__nav-link">Обо мне</a>
+              <a href="#about" class="header__nav-link" data-i18n="nav.about">Обо мне</a>
             </li>
             <li class="header__nav-item">
-              <a href="#skills" class="header__nav-link">Навыки</a>
+              <a href="#skills" class="header__nav-link" data-i18n="nav.skills">Навыки</a>
             </li>
             <li class="header__nav-item">
-              <a href="#projects" class="header__nav-link">Проекты</a>
+              <a href="#projects" class="header__nav-link" data-i18n="nav.projects">Проекты</a>
             </li>
             <li class="header__nav-item">
-              <a href="#contacts" class="header__nav-link">Контакты</a>
+              <a href="#contacts" class="header__nav-link" data-i18n="nav.contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -87,6 +101,7 @@
             href="https://lelyaler.github.io/anketa/"
             target="_blank"
             rel="noopener noreferrer"
+            data-i18n="nav.anketa"
             >Анкета</a
           >
           <a
@@ -94,14 +109,32 @@
             href="https://lelyaler.github.io/cv/"
             target="_blank"
             rel="noopener noreferrer"
+            data-i18n="nav.cv"
             >CV</a
           >
+          <div class="lang-switch" role="group" aria-label="Выбор языка" data-i18n-attr="aria-label:ui.langSwitchLabel">
+            <button
+              type="button"
+              class="lang-switch__btn is-active"
+              data-lang="ru"
+              aria-pressed="true"
+              >RU</button
+            >
+            <span class="lang-switch__divider" aria-hidden="true">/</span>
+            <button
+              type="button"
+              class="lang-switch__btn"
+              data-lang="en"
+              aria-pressed="false"
+              >EN</button
+            >
+          </div>
         </div>
       </header>
       <main>
         <section class="information">
           <div class="information__about">
-            <h1 class="information__title">
+            <h1 class="information__title" data-i18n="hero.title" data-i18n-html="true">
               Привет, меня зовут Лера
               <span class="information__hand">👋</span>
             </h1>
@@ -111,10 +144,10 @@
               ><span class="pipe">|</span>
             </p>
             <div class="information__buttons">
-              <a class="button button-yellow link link-btn" href="#projects"
+              <a class="button button-yellow link link-btn" href="#projects" data-i18n="hero.projectsBtn"
                 >Список работ</a
               >
-              <a class="link link-btn button" href="#contacts">Контакты</a>
+              <a class="link link-btn button" href="#contacts" data-i18n="hero.contactsBtn">Контакты</a>
             </div>
           </div>
           <img
@@ -124,38 +157,39 @@
             width="460"
             height="415"
             fetchpriority="high"
+            data-i18n-attr="alt:hero.imageAlt"
           />
         </section>
 
         <section id="about" class="about">
           <div class="about__main">
-            <h2 class="title" data-splitting="chars">Обо мне</h2>
-            <p class="about__description" data-splitting="words">
+            <h2 class="title" data-splitting="chars" data-i18n="about.title">Обо мне</h2>
+            <p class="about__description" data-splitting="words" data-i18n="about.p1">
               Frontend-разработчик с 3 годами коммерческого опыта в веб-разработке. Создаю быстрые, интерактивные и адаптивные веб-приложения и интеграции на WordPress.
             </p>
-            <p class="about__description" data-splitting="words">
+            <p class="about__description" data-splitting="words" data-i18n="about.p2" data-i18n-html="true">
               Работала в <strong>MaxBitSolution (iGaming, резидент ПВТ)</strong>: проектировала компонентную архитектуру, разрабатывала и кастомизировала темы и плагины WordPress. Писала кастомные темы на объектно-ориентированном PHP (WP_Query, $wpdb, Composer PSR-4) с разделением логики, данных и шаблонов. Создавала кастомные Gutenberg-блоки, интегрировала REST API и PHP-хуки. Системно оптимизировала производительность: Core Web Vitals 90+, семантическая разметка Schema.org (JSON-LD) и SEO-метатеги.
             </p>
             <div class="about__more" id="about-more">
-              <p class="about__description" data-splitting="words">
+              <p class="about__description" data-splitting="words" data-i18n="about.p3">
                 На фрилансе разрабатываю проекты «под ключ»: от интерактивных SPA до интернет-магазинов на WooCommerce. Создаю чистый поддерживаемый код с акцентом на безопасность (валидация, экранирование, защита от XSS и CSRF) и максимальную скорость загрузки.
               </p>
               <div class="about__competencies">
                 <div class="about__competency-card">
-                  <h3 class="about__competency-title">Frontend & Интерактив</h3>
-                  <p class="about__competency-desc">
+                  <h3 class="about__competency-title" data-i18n="about.comp1Title">Frontend & Интерактив</h3>
+                  <p class="about__competency-desc" data-i18n="about.comp1Desc">
                     React (хуки, роутинг, управление состоянием), TypeScript, современный ES6+, семантическая вёрстка по БЭМ, сложные анимации (GSAP, ScrollTrigger, CSS 3D), Pixel Perfect и Mobile First.
                   </p>
                 </div>
                 <div class="about__competency-card">
-                  <h3 class="about__competency-title">WordPress & Backend</h3>
-                  <p class="about__competency-desc">
+                  <h3 class="about__competency-title" data-i18n="about.comp2Title">WordPress & Backend</h3>
+                  <p class="about__competency-desc" data-i18n="about.comp2Desc">
                     Разработка тем с нуля на ООП PHP, кастомные блоки Gutenberg, плагины, WP_Query, $wpdb, Rewrite API, WooCommerce, платёжные API и интеграции по REST API.
                   </p>
                 </div>
                 <div class="about__competency-card">
-                  <h3 class="about__competency-title">Инструменты & DevOps</h3>
-                  <p class="about__competency-desc">
+                  <h3 class="about__competency-title" data-i18n="about.comp3Title">Инструменты & DevOps</h3>
+                  <p class="about__competency-desc" data-i18n="about.comp3Desc">
                     Изоляция окружений в Docker, автоматизация сборок и деплоя через GitLab CI, бандлеры Vite и Webpack, контроль версий в Git, оптимизация Core Web Vitals и веб-доступность.
                   </p>
                 </div>
@@ -166,7 +200,7 @@
               id="about-expand-btn"
               type="button"
             >
-              <span class="about__expand-btn-text">Читать полностью</span>
+              <span class="about__expand-btn-text" data-i18n="about.expandClosed">Читать полностью</span>
               <svg
                 class="about__expand-btn-icon"
                 viewBox="0 0 24 24"
@@ -185,7 +219,7 @@
         </section>
         <section id="skills" class="skills">
           <div class="skills__inner">
-            <h2 class="title" data-splitting="chars">Навыки</h2>
+            <h2 class="title" data-splitting="chars" data-i18n="skills.title">Навыки</h2>
             <ul class="skills__list">
               <li class="skills__list-item">
                 <div class="skills__list-item-inner">
@@ -231,17 +265,15 @@
               </li>
               <li class="skills__list-item">
                 <div class="skills__list-item-inner">
-                  <div class="skills__ts-box">
-                    <img
-                      class="skills__item-img"
-                      src="./images/typescript.svg"
-                      alt=""
-                      aria-hidden="true"
-                      width="60"
-                      height="62"
-                      loading="lazy"
-                    />
-                  </div>
+                  <img
+                    class="skills__item-img"
+                    src="./images/typescript.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="60"
+                    height="60"
+                    loading="lazy"
+                  />
                   <span class="skills__item-title">TypeScript</span>
                 </div>
               </li>
@@ -403,7 +435,7 @@
           </div>
         </section>
         <section id="projects" class="projects">
-          <h2 class="title" data-splitting="chars">Проекты</h2>
+          <h2 class="title" data-splitting="chars" data-i18n="projects.title">Проекты</h2>
           <div class="projects__inner">
             <div class="projects__card">
               <div class="projects__card-img">
@@ -419,7 +451,7 @@
               </div>
               <div class="projects__info">
                 <h3 class="projects__info-title">NOVA Pay</h3>
-                <p class="projects__info-desc">
+                <p class="projects__info-desc" data-i18n="projects.cards.nova.desc">
                   Финтех-сервис с плавной интерактивной 3D-анимацией на GSAP, современным адаптивным интерфейсом и высокой производительностью.
                 </p>
                 <span class="projects__info-tech"
@@ -432,6 +464,8 @@
                     rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Animation/"
                     aria-label="Посетить сайт проекта NOVA Pay"
+                    data-i18n="projects.visitBtn"
+                    data-i18n-attr="aria-label:projects.cards.nova.visitAria"
                   >
                     Посетить сайт
                   </a>
@@ -441,6 +475,8 @@
                     rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Animation"
                     aria-label="Исходный код проекта NOVA Pay на GitHub"
+                    data-i18n="projects.githubBtn"
+                    data-i18n-attr="aria-label:projects.cards.nova.githubAria"
                   >
                     GitHub
                   </a>
@@ -464,7 +500,7 @@
                 <h3 class="projects__info-title">
                   Cybersecurity Operations Center
                 </h3>
-                <p class="projects__info-desc">
+                <p class="projects__info-desc" data-i18n="projects.cards.security.desc">
                   Аналитический дашборд кибербезопасности на React 19 с интерактивной визуализацией сетевых метрик и инцидентов через Recharts.
                 </p>
                 <span class="projects__info-tech"
@@ -477,6 +513,8 @@
                     rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Security-Operations/"
                     aria-label="Посетить сайт проекта Cybersecurity Operations Center"
+                    data-i18n="projects.visitBtn"
+                    data-i18n-attr="aria-label:projects.cards.security.visitAria"
                   >
                     Посетить сайт
                   </a>
@@ -486,6 +524,8 @@
                     rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Security-Operations"
                     aria-label="Исходный код проекта Cybersecurity Operations Center на GitHub"
+                    data-i18n="projects.githubBtn"
+                    data-i18n-attr="aria-label:projects.cards.security.githubAria"
                   >
                     GitHub
                   </a>
@@ -507,7 +547,7 @@
               </div>
               <div class="projects__info">
                 <h3 class="projects__info-title">GameVault</h3>
-                <p class="projects__info-desc">
+                <p class="projects__info-desc" data-i18n="projects.cards.gamevault.desc">
                   Витрина и бэклог-трекер видеоигр в стилистике PS5 на React 19 и TypeScript со строгой типизацией, Gamepad API и Tailwind CSS.
                 </p>
                 <span class="projects__info-tech"
@@ -520,6 +560,8 @@
                     rel="noopener noreferrer"
                     href="https://lelyaler.github.io/React-TypeScript/"
                     aria-label="Посетить сайт проекта GameVault"
+                    data-i18n="projects.visitBtn"
+                    data-i18n-attr="aria-label:projects.cards.gamevault.visitAria"
                   >
                     Посетить сайт
                   </a>
@@ -529,6 +571,8 @@
                     rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/React-TypeScript"
                     aria-label="Исходный код проекта GameVault на GitHub"
+                    data-i18n="projects.githubBtn"
+                    data-i18n-attr="aria-label:projects.cards.gamevault.githubAria"
                   >
                     GitHub
                   </a>
@@ -550,7 +594,7 @@
               </div>
               <div class="projects__info">
                 <h3 class="projects__info-title">Techwear Store</h3>
-                <p class="projects__info-desc">
+                <p class="projects__info-desc" data-i18n="projects.cards.techwear.desc">
                   Концептуальный PWA веб-магазин тактической одежды с 3D-конфигуратором экипировки, Web Audio API синтезатором и Canvas-терминалом.
                 </p>
                 <span class="projects__info-tech"
@@ -563,6 +607,8 @@
                     rel="noopener noreferrer"
                     href="https://lelyaler.github.io/techwear-store/"
                     aria-label="Посетить сайт проекта Techwear Store"
+                    data-i18n="projects.visitBtn"
+                    data-i18n-attr="aria-label:projects.cards.techwear.visitAria"
                   >
                     Посетить сайт
                   </a>
@@ -572,6 +618,8 @@
                     rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/techwear-store"
                     aria-label="Исходный код проекта Techwear Store на GitHub"
+                    data-i18n="projects.githubBtn"
+                    data-i18n-attr="aria-label:projects.cards.techwear.githubAria"
                   >
                     GitHub
                   </a>
@@ -593,7 +641,7 @@
               </div>
               <div class="projects__info">
                 <h3 class="projects__info-title">Cyberpunk Promo</h3>
-                <p class="projects__info-desc">
+                <p class="projects__info-desc" data-i18n="projects.cards.cyberpunk.desc">
                   Атмосферный промо-лендинг в стиле Cyberpunk с динамическими интерактивными слайдерами Swiper и визуальными эффектами.
                 </p>
                 <span class="projects__info-tech"
@@ -606,6 +654,8 @@
                     rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Cyberpunk-only-html-css-js-/"
                     aria-label="Посетить сайт проекта Cyberpunk Promo"
+                    data-i18n="projects.visitBtn"
+                    data-i18n-attr="aria-label:projects.cards.cyberpunk.visitAria"
                   >
                     Посетить сайт
                   </a>
@@ -615,6 +665,8 @@
                     rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Cyberpunk-only-html-css-js-"
                     aria-label="Исходный код проекта Cyberpunk Promo на GitHub"
+                    data-i18n="projects.githubBtn"
+                    data-i18n-attr="aria-label:projects.cards.cyberpunk.githubAria"
                   >
                     GitHub
                   </a>
@@ -636,7 +688,7 @@
               </div>
               <div class="projects__info">
                 <h3 class="projects__info-title">Edufree EdTech Landing</h3>
-                <p class="projects__info-desc">
+                <p class="projects__info-desc" data-i18n="projects.cards.edufree.desc">
                   Посадочная страница образовательной платформы курсов с адаптивной сеткой на Tailwind CSS и быстрой загрузкой.
                 </p>
                 <span class="projects__info-tech"
@@ -649,6 +701,8 @@
                     rel="noopener noreferrer"
                     href="https://lelyaler.github.io/tailwind-site/"
                     aria-label="Посетить сайт проекта Edufree EdTech Landing"
+                    data-i18n="projects.visitBtn"
+                    data-i18n-attr="aria-label:projects.cards.edufree.visitAria"
                   >
                     Посетить сайт
                   </a>
@@ -658,6 +712,8 @@
                     rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/tailwind-site"
                     aria-label="Исходный код проекта Edufree EdTech Landing на GitHub"
+                    data-i18n="projects.githubBtn"
+                    data-i18n-attr="aria-label:projects.cards.edufree.githubAria"
                   >
                     GitHub
                   </a>
@@ -679,7 +735,7 @@
               </div>
               <div class="projects__info">
                 <h3 class="projects__info-title">Sneakmax Sneaker Store</h3>
-                <p class="projects__info-desc">
+                <p class="projects__info-desc" data-i18n="projects.cards.sneakmax.desc">
                   Каталог кроссовок с интерактивным подбором моделей, квизом, модальными окнами и адаптивной вёрсткой.
                 </p>
                 <span class="projects__info-tech">HTML, CSS, JavaScript, Interactive Quiz</span>
@@ -690,6 +746,8 @@
                     rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Sneakmax/"
                     aria-label="Посетить сайт проекта Sneakmax Sneaker Store"
+                    data-i18n="projects.visitBtn"
+                    data-i18n-attr="aria-label:projects.cards.sneakmax.visitAria"
                   >
                     Посетить сайт
                   </a>
@@ -699,6 +757,8 @@
                     rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Sneakmax"
                     aria-label="Исходный код проекта Sneakmax Sneaker Store на GitHub"
+                    data-i18n="projects.githubBtn"
+                    data-i18n-attr="aria-label:projects.cards.sneakmax.githubAria"
                   >
                     GitHub
                   </a>
@@ -720,7 +780,7 @@
               </div>
               <div class="projects__info">
                 <h3 class="projects__info-title">Crypto-sticky</h3>
-                <p class="projects__info-desc">
+                <p class="projects__info-desc" data-i18n="projects.cards.crypto.desc">
                   Информационный крипто-лендинг со sticky-навигацией, интерактивными графическими блоками и адаптивным слайдером.
                 </p>
                 <span class="projects__info-tech"
@@ -733,6 +793,8 @@
                     rel="noopener noreferrer"
                     href="https://lelyaler.github.io/crypto-sticky/"
                     aria-label="Посетить сайт проекта Crypto-sticky"
+                    data-i18n="projects.visitBtn"
+                    data-i18n-attr="aria-label:projects.cards.crypto.visitAria"
                   >
                     Посетить сайт
                   </a>
@@ -742,6 +804,8 @@
                     rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/crypto-sticky"
                     aria-label="Исходный код проекта Crypto-sticky на GitHub"
+                    data-i18n="projects.githubBtn"
+                    data-i18n-attr="aria-label:projects.cards.crypto.githubAria"
                   >
                     GitHub
                   </a>
@@ -763,7 +827,7 @@
               </div>
               <div class="projects__info">
                 <h3 class="projects__info-title">Legal Services</h3>
-                <p class="projects__info-desc">
+                <p class="projects__info-desc" data-i18n="projects.cards.legal.desc">
                   Корпоративный сайт юридической компании со строгой типографикой, отзывами клиентов и формами обратной связи.
                 </p>
                 <span class="projects__info-tech"
@@ -776,6 +840,8 @@
                     rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Legal-website/"
                     aria-label="Посетить сайт проекта Legal Services"
+                    data-i18n="projects.visitBtn"
+                    data-i18n-attr="aria-label:projects.cards.legal.visitAria"
                   >
                     Посетить сайт
                   </a>
@@ -785,6 +851,8 @@
                     rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Legal-website"
                     aria-label="Исходный код проекта Legal Services на GitHub"
+                    data-i18n="projects.githubBtn"
+                    data-i18n-attr="aria-label:projects.cards.legal.githubAria"
                   >
                     GitHub
                   </a>
@@ -806,7 +874,7 @@
               </div>
               <div class="projects__info">
                 <h3 class="projects__info-title">Creative Animation Showcase</h3>
-                <p class="projects__info-desc">
+                <p class="projects__info-desc" data-i18n="projects.cards.animation.desc">
                   Интерактивная галерея веб-анимаций на чистом CSS и JavaScript для демонстрации визуальных возможностей и микроинтеракций.
                 </p>
                 <span class="projects__info-tech"
@@ -819,6 +887,8 @@
                     rel="noopener noreferrer"
                     href="https://lelyaler.github.io/Animation-web/"
                     aria-label="Посетить сайт проекта Creative Animation Showcase"
+                    data-i18n="projects.visitBtn"
+                    data-i18n-attr="aria-label:projects.cards.animation.visitAria"
                   >
                     Посетить сайт
                   </a>
@@ -828,6 +898,8 @@
                     rel="noopener noreferrer"
                     href="https://github.com/Lelyaler/Animation-web"
                     aria-label="Исходный код проекта Creative Animation Showcase на GitHub"
+                    data-i18n="projects.githubBtn"
+                    data-i18n-attr="aria-label:projects.cards.animation.githubAria"
                   >
                     GitHub
                   </a>
@@ -861,8 +933,8 @@
 
         <section id="contacts" class="contacts">
           <div class="contacts__inner">
-            <h2 class="title" data-splitting="chars">Контакты</h2>
-            <p class="contacts__subtitle">
+            <h2 class="title" data-splitting="chars" data-i18n="contacts.title">Контакты</h2>
+            <p class="contacts__subtitle" data-i18n="contacts.subtitle">
               Открыта к интересным предложениям о сотрудничестве, фронтенд-проектам и коммерческой разработке.
             </p>
             <ul class="contacts__list">
@@ -879,13 +951,13 @@
                   />
                 </div>
                 <div class="about__contacts-info">
-                  <h3 class="about__contacts-title">Имя</h3>
-                  <span class="about__contacts-description">Валерия Чернявская</span>
+                  <h3 class="about__contacts-title" data-i18n="contacts.nameLabel">Имя</h3>
+                  <span class="about__contacts-description" data-i18n="contacts.nameValue">Валерия Чернявская</span>
                 </div>
               </li>
               <li class="about__list-item">
                 <div class="about__contacts-img">
-                  <a href="mailto:lelyaler@gmail.com" aria-label="Написать на электронную почту">
+                  <a href="mailto:lelyaler@gmail.com" aria-label="Написать на электронную почту" data-i18n-attr="aria-label:contacts.emailAria">
                     <img
                       src="./images/mail.svg"
                       class="about__contacts-icon"
@@ -898,13 +970,13 @@
                   </a>
                 </div>
                 <div class="about__contacts-info">
-                  <h3 class="about__contacts-title">Почта</h3>
+                  <h3 class="about__contacts-title" data-i18n="contacts.emailLabel">Почта</h3>
                   <a href="mailto:lelyaler@gmail.com" class="about__contacts-description">lelyaler@gmail.com</a>
                 </div>
               </li>
               <li class="about__list-item">
                 <div class="about__contacts-img">
-                  <a href="https://t.me/lelyaler" target="_blank" rel="noopener noreferrer" aria-label="Связаться в Telegram">
+                  <a href="https://t.me/lelyaler" target="_blank" rel="noopener noreferrer" aria-label="Связаться в Telegram" data-i18n-attr="aria-label:contacts.telegramAria">
                     <img
                       src="./images/telegram.svg"
                       class="about__contacts-icon"
@@ -917,13 +989,13 @@
                   </a>
                 </div>
                 <div class="about__contacts-info">
-                  <h3 class="about__contacts-title">Телеграм</h3>
+                  <h3 class="about__contacts-title" data-i18n="contacts.telegramLabel">Телеграм</h3>
                   <a href="https://t.me/lelyaler" target="_blank" rel="noopener noreferrer" class="about__contacts-description">@lelyaler</a>
                 </div>
               </li>
               <li class="about__list-item">
                 <div class="about__contacts-img">
-                  <a href="tel:+375292209426" aria-label="Позвонить по телефону">
+                  <a href="tel:+375292209426" aria-label="Позвонить по телефону" data-i18n-attr="aria-label:contacts.phoneAria">
                     <img
                       src="./images/phone.svg"
                       class="about__contacts-icon"
@@ -936,13 +1008,13 @@
                   </a>
                 </div>
                 <div class="about__contacts-info">
-                  <h3 class="about__contacts-title">Телефон</h3>
+                  <h3 class="about__contacts-title" data-i18n="contacts.phoneLabel">Телефон</h3>
                   <a href="tel:+375292209426" class="about__contacts-description">+375(29) 220 94 26</a>
                 </div>
               </li>
               <li class="about__list-item">
                 <div class="about__contacts-img">
-                  <a href="https://www.instagram.com/lelyaler" target="_blank" rel="noopener noreferrer" aria-label="Открыть профиль Instagram">
+                  <a href="https://www.instagram.com/lelyaler" target="_blank" rel="noopener noreferrer" aria-label="Открыть профиль Instagram" data-i18n-attr="aria-label:contacts.instagramAria">
                     <img
                       src="./images/instagram.svg"
                       class="about__contacts-icon"
@@ -955,7 +1027,7 @@
                   </a>
                 </div>
                 <div class="about__contacts-info">
-                  <h3 class="about__contacts-title">Instagram</h3>
+                  <h3 class="about__contacts-title" data-i18n="contacts.instagramLabel">Instagram</h3>
                   <a href="https://www.instagram.com/lelyaler" target="_blank" rel="noopener noreferrer" class="about__contacts-description">@lelyaler</a>
                 </div>
               </li>
@@ -963,7 +1035,7 @@
           </div>
         </section>
         <footer class="footer">
-          <p class="footer__copy">© 2026 Валерия Чернявская. Frontend Developer Portfolio.</p>
+          <p class="footer__copy" data-i18n="footer.copy">© 2026 Валерия Чернявская. Frontend Developer Portfolio.</p>
         </footer>
       </main>
     </div>
@@ -972,6 +1044,7 @@
       id="scroll-top-btn"
       aria-label="Наверх"
       title="Наверх"
+      data-i18n-attr="aria-label:ui.scrollTop,title:ui.scrollTop"
     >
       <svg
         viewBox="0 0 24 24"
@@ -986,6 +1059,7 @@
         <polyline points="18 15 12 9 6 15"></polyline>
       </svg>
     </button>
+    <script defer src="translations.js"></script>
     <script defer src="main.js"></script>
   </body>
 </html>

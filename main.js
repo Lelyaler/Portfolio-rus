@@ -1,6 +1,170 @@
 // scroll animation
 
 gsap.registerPlugin(ScrollTrigger);
+
+// --- i18n Internationalization ---
+function getInitialLanguage() {
+  if (window.__initialLang) return window.__initialLang;
+  try {
+    const saved = localStorage.getItem("portfolio_lang");
+    if (saved === "ru" || saved === "en") return saved;
+    const navLang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+    return navLang.toLowerCase().startsWith("ru") ? "ru" : "en";
+  } catch (e) {
+    return "ru";
+  }
+}
+
+let currentLang = getInitialLanguage();
+
+function getTranslation(path, lang = currentLang) {
+  const dict = window.translations && window.translations[lang];
+  if (!dict) return null;
+  return path.split(".").reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : null), dict);
+}
+
+function updateSectionSplittingOpacity(selector) {
+  const sec = document.querySelector(selector);
+  if (!sec) return;
+  const rect = sec.getBoundingClientRect();
+  if (rect.top < window.innerHeight) {
+    sec.querySelectorAll(".char, .word").forEach((el) => {
+      el.style.opacity = "1";
+    });
+  }
+}
+
+function applyTranslations(lang, isDynamicChange = false) {
+  document.documentElement.lang = lang;
+
+  // Title & Meta tags
+  const title = getTranslation("meta.title", lang);
+  if (title) document.title = title;
+
+  const metaDesc = document.querySelector('meta[name="description"]');
+  const transDesc = getTranslation("meta.description", lang);
+  if (metaDesc && transDesc) metaDesc.setAttribute("content", transDesc);
+
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const transOgTitle = getTranslation("meta.ogTitle", lang);
+  if (ogTitle && transOgTitle) ogTitle.setAttribute("content", transOgTitle);
+
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  const transOgDesc = getTranslation("meta.ogDesc", lang);
+  if (ogDesc && transOgDesc) ogDesc.setAttribute("content", transOgDesc);
+
+  const ogLocale = document.querySelector('meta[property="og:locale"]');
+  if (ogLocale) ogLocale.setAttribute("content", lang === "ru" ? "ru_RU" : "en_US");
+
+  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+  const transTwTitle = getTranslation("meta.twitterTitle", lang);
+  if (twitterTitle && transTwTitle) twitterTitle.setAttribute("content", transTwTitle);
+
+  const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+  const transTwDesc = getTranslation("meta.twitterDesc", lang);
+  if (twitterDesc && transTwDesc) twitterDesc.setAttribute("content", transTwDesc);
+
+  // Resume buttons links
+  const anketaBtn = document.querySelector(".header__btn--anketa");
+  if (anketaBtn) {
+    anketaBtn.href = lang === "en" ? "https://lelyaler.github.io/cv/" : "https://lelyaler.github.io/anketa/";
+  }
+  const cvBtn = document.querySelector(".header__btn--cv");
+  if (cvBtn) {
+    cvBtn.href = lang === "en" ? "https://lelyaler.github.io/anketa/" : "https://lelyaler.github.io/cv/";
+  }
+
+  // Text content elements with data-i18n
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    const val = getTranslation(key, lang);
+    if (val !== null && typeof val === "string") {
+      if (el.dataset.i18nHtml === "true") {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    }
+  });
+
+  // Attribute elements with data-i18n-attr
+  document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+    const attrPairs = el.getAttribute("data-i18n-attr").split(",");
+    attrPairs.forEach((pair) => {
+      const [attr, key] = pair.split(":");
+      if (attr && key) {
+        const val = getTranslation(key.trim(), lang);
+        if (val !== null && typeof val === "string") {
+          el.setAttribute(attr.trim(), val);
+        }
+      }
+    });
+  });
+
+  // Expandable sections button labels
+  const aboutExpandBtn = document.getElementById("about-expand-btn");
+  const aboutMore = document.getElementById("about-more");
+  if (aboutExpandBtn && aboutMore) {
+    const isOpen = aboutMore.classList.contains("is-open");
+    const textEl = aboutExpandBtn.querySelector(".about__expand-btn-text");
+    if (textEl) {
+      textEl.textContent = isOpen
+        ? getTranslation("about.expandOpen", lang)
+        : getTranslation("about.expandClosed", lang);
+    }
+  }
+
+  const projectsExpandBtn = document.getElementById("projects-expand-btn");
+  const extraCards = document.querySelectorAll(".projects__card--extra");
+  if (projectsExpandBtn && extraCards.length) {
+    const isProjOpen = projectsExpandBtn.classList.contains("is-open");
+    const textEl = projectsExpandBtn.querySelector(".projects__expand-btn-text");
+    if (textEl) {
+      const closedFn = getTranslation("projects.expandClosed", lang);
+      textEl.textContent = isProjOpen
+        ? getTranslation("projects.expandOpen", lang)
+        : (typeof closedFn === "function" ? closedFn(extraCards.length) : `Показать все проекты (ещё ${extraCards.length})`);
+    }
+  }
+
+  // Language switcher active states
+  document.querySelectorAll(".lang-switch__btn").forEach((btn) => {
+    const btnLang = btn.getAttribute("data-lang");
+    const isActive = btnLang === lang;
+    btn.classList.toggle("is-active", isActive);
+    btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
+
+  // Dynamic language switch updates Splitting & ScrollTrigger
+  if (isDynamicChange && typeof Splitting !== "undefined") {
+    Splitting();
+    updateSectionSplittingOpacity(".about");
+    updateSectionSplittingOpacity(".skills");
+    updateSectionSplittingOpacity(".projects");
+    updateSectionSplittingOpacity(".contacts");
+    if (typeof ScrollTrigger !== "undefined") {
+      setTimeout(() => ScrollTrigger.refresh(), 100);
+    }
+  }
+}
+
+// Initial translation application
+applyTranslations(currentLang, false);
+
+// Language switcher clicks
+document.querySelectorAll(".lang-switch__btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const selectedLang = btn.getAttribute("data-lang");
+    if (selectedLang && selectedLang !== currentLang) {
+      currentLang = selectedLang;
+      try {
+        localStorage.setItem("portfolio_lang", currentLang);
+      } catch (e) {}
+      applyTranslations(currentLang, true);
+    }
+  });
+});
+
 Splitting();
 
 const lenis = new Lenis({
@@ -257,7 +421,9 @@ if (expandBtn && aboutMore) {
     expandBtn.classList.toggle("is-open", isOpen);
     const btnText = expandBtn.querySelector(".about__expand-btn-text");
     if (btnText) {
-      btnText.textContent = isOpen ? "Свернуть" : "Читать полностью";
+      btnText.textContent = isOpen
+        ? getTranslation("about.expandOpen")
+        : getTranslation("about.expandClosed");
     }
     if (typeof ScrollTrigger !== "undefined") {
       setTimeout(() => {
@@ -296,9 +462,10 @@ if (projectsExpandBtn && extraProjectCards.length) {
     projectsExpandBtn.classList.toggle("is-open", isProjectsOpen);
     const btnText = projectsExpandBtn.querySelector(".projects__expand-btn-text");
     if (btnText) {
+      const closedFn = getTranslation("projects.expandClosed");
       btnText.textContent = isProjectsOpen
-        ? "Свернуть архив проектов"
-        : `Показать все проекты (ещё ${extraProjectCards.length})`;
+        ? getTranslation("projects.expandOpen")
+        : (typeof closedFn === "function" ? closedFn(extraProjectCards.length) : `Показать все проекты (ещё ${extraProjectCards.length})`);
     }
 
     extraProjectCards.forEach((card, index) => {
