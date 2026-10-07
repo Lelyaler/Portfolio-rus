@@ -167,12 +167,14 @@ document.querySelectorAll(".lang-switch__btn").forEach((btn) => {
 
 Splitting();
 
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 const lenis = new Lenis({
-  duration: 1.2,
+  duration: prefersReducedMotion ? 0 : 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   direction: "vertical",
   gestureDirection: "vertical",
-  smooth: true,
+  smooth: !prefersReducedMotion,
   mouseMultiplier: 1,
   smoothTouch: false,
   touchMultiplier: 2,
@@ -386,20 +388,23 @@ function changeTypeText() {
 
 changeTypeText();
 
-document.querySelectorAll(".header__nav-link").forEach((link) => {
+function smoothScrollTo(targetSelector) {
+  const target = document.querySelector(targetSelector);
+  if (!target) return;
+  if (typeof lenis !== "undefined" && lenis && !prefersReducedMotion) {
+    lenis.scrollTo(target, { offset: -30 });
+  } else {
+    target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
+  }
+}
+
+document.querySelectorAll(".header__nav-link, .link-btn").forEach((link) => {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-document.querySelectorAll(".link-btn").forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
+    const href = this.getAttribute("href");
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
+      smoothScrollTo(href);
+    }
   });
 });
 const skillsArr = document.querySelectorAll(".skills__list-item-inner");

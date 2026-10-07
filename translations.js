@@ -18,6 +18,7 @@ const translations = {
     },
     hero: {
       title: 'Привет, меня зовут Лера <span class="information__hand">👋</span>',
+      subtitlePrefix: "Я —",
       projectsBtn: "Список работ",
       contactsBtn: "Контакты",
       imageAlt: "Валерия Чернявская"
@@ -134,11 +135,12 @@ const translations = {
       skills: "Skills",
       projects: "Projects",
       contacts: "Contacts",
-      anketa: "CV",
-      cv: "CV RUS"
+      anketa: "CV (RU)",
+      cv: "CV (EN)"
     },
     hero: {
       title: 'Hi, I\'m Valeria <span class="information__hand">👋</span>',
+      subtitlePrefix: "I'm",
       projectsBtn: "View Projects",
       contactsBtn: "Contact Me",
       imageAlt: "Valeriya Cherniavskaya"

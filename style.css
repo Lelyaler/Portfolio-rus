@@ -213,6 +213,15 @@ body {
   font-weight: 500;
 }
 
+:focus-visible {
+  outline: 0.125rem solid #fdca40;
+  outline-offset: 0.1875rem;
+}
+
+section[id] {
+  scroll-margin-top: 3.5rem;
+}
+
 .element-show {
   opacity: 1;
   transition: all 1.5s;
@@ -1047,4 +1056,29 @@ body {
   border-color: #fdca40;
   transform: translateY(-4px);
   box-shadow: 0 6px 25px rgba(253, 202, 64, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .information__hand,
+  .header__btn--anketa {
+    animation: none !important;
+  }
+  .char,
+  .word {
+    opacity: 1 !important;
+  }
+  .skills__list {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 } /*# sourceMappingURL=style.css.map */
