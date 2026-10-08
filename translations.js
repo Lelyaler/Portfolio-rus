@@ -73,9 +73,9 @@ const translations = {
           githubAria: "Исходный код проекта Techwear Store на GitHub"
         },
         cyberpunk: {
-          desc: "Атмосферный промо-лендинг в стиле Cyberpunk с динамическими интерактивными слайдерами Swiper и визуальными эффектами.",
+          desc: "Атмосферный промо-лендинг в стиле Cyberpunk с динамическими слайдерами Swiper и интеграцией в кастомную тему WordPress (PHP).",
           visitAria: "Посетить сайт проекта Cyberpunk Promo",
-          githubAria: "Исходный код проекта Cyberpunk Promo на GitHub"
+          githubAria: "Исходный код темы WordPress для Cyberpunk Promo на GitHub"
         },
         edufree: {
           desc: "Посадочная страница образовательной платформы курсов с адаптивной сеткой на Tailwind CSS и быстрой загрузкой.",
@@ -200,9 +200,9 @@ const translations = {
           githubAria: "Source code of Techwear Store on GitHub"
         },
         cyberpunk: {
-          desc: "Atmospheric Cyberpunk promo landing page featuring dynamic interactive Swiper sliders and visual effects.",
+          desc: "Atmospheric Cyberpunk promo landing page with Swiper sliders and custom WordPress theme integration (PHP).",
           visitAria: "Visit Cyberpunk Promo website",
-          githubAria: "Source code of Cyberpunk Promo on GitHub"
+          githubAria: "Source code of Cyberpunk WordPress theme on GitHub"
         },
         edufree: {
           desc: "Landing page for an educational course platform featuring a responsive Tailwind CSS grid and ultra-fast loading.",
