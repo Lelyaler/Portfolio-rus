@@ -47,6 +47,11 @@ const translations = {
       expandOpen: "Свернуть архив проектов",
       expandClosed: (count) => `Показать все проекты (ещё ${count})`,
       cards: {
+        spinpulse: {
+          desc: "Премиальное игровое лобби слотов, краш-игр и live-столов на React 19 с демо-балансом, звуковым движком Web Audio API и быстрой мобильной загрузкой.",
+          visitAria: "Посетить сайт проекта SpinPulse VIP",
+          githubAria: "Исходный код проекта SpinPulse VIP на GitHub"
+        },
         nova: {
           desc: "Финтех-сервис с плавной интерактивной 3D-анимацией на GSAP, современным адаптивным интерфейсом и высокой производительностью.",
           visitAria: "Посетить сайт проекта NOVA Pay",
@@ -169,6 +174,11 @@ const translations = {
       expandOpen: "Collapse project archive",
       expandClosed: (count) => `Show all projects (${count} more)`,
       cards: {
+        spinpulse: {
+          desc: "High-end iGaming casino lobby simulator on React 19 featuring demo balance, Web Audio API sound effects, and fast mobile performance.",
+          visitAria: "Visit SpinPulse VIP project website",
+          githubAria: "Source code of SpinPulse VIP on GitHub"
+        },
         nova: {
           desc: "Fintech service featuring smooth interactive 3D animation with GSAP, modern responsive UI, and high performance.",
           visitAria: "Visit NOVA Pay project website",
