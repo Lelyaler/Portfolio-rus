@@ -729,7 +729,7 @@ section[id] {
   aspect-ratio: 16 / 13;
   height: auto;
   object-fit: cover;
-  object-position: top !important;
+  object-position: top left !important;
 }
 .projects__info {
   -moz-text-align-last: left;
