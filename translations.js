@@ -48,7 +48,7 @@ const translations = {
       expandClosed: (count) => `Показать все проекты (ещё ${count})`,
       cards: {
         spinpulse: {
-          desc: "Премиальное игровое лобби слотов, краш-игр и live-столов на React 19 с демо-балансом, звуковым движком Web Audio API и быстрой мобильной загрузкой.",
+          desc: "Игровое лобби слотов, краш-игр и live-столов на React 19 с демо-балансом, Web Audio API и быстрой мобильной загрузкой.",
           visitAria: "Посетить сайт проекта SpinPulse VIP",
           githubAria: "Исходный код проекта SpinPulse VIP на GitHub"
         },
